@@ -1,0 +1,89 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --scrollTop: var(--scrollTop);
+
+  --index: calc(1vw + 1vh);
+}
+@font-face {
+  font-family: raleway_f;
+  src: url(../fonts/raleway-regular.woff2);
+}
+@font-face {
+  font-family: raleway_f;
+  src: url(../fonts/raleway-black.woff2);
+  font-weight: 900;
+}
+body {
+  background-color: #010101;
+  font-family: raleway_f, sans-serif;
+  line-height: 1.55;
+}
+.main-header {
+  position: relative;
+  overflow: hidden;
+}
+.main-header::after {
+  content: "";
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  height: calc(var(--index) * 10);
+  background: url(../img/ground.png) center/cover no-repeat;
+  bottom: calc(var(--index) * -4);
+}
+.layers {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+.layer {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  will-change: transform;
+}
+.main-section {
+  min-height: 100vh;
+}
+.layers__base {
+  transform: translate3d(0, calc(var(--scrollTop) / 2), 0);
+  z-index: 0;
+}
+.layers__middle {
+  transform: translate3d(0, calc(var(--scrollTop) / 2.6), 0);
+  z-index: 2;
+}
+.layers__front {
+  transform: translate3d(0, calc(var(--scrollTop) / 5.5), 0);
+  z-index: 2;
+}
+
+.layer__header {
+  z-index: 1;
+  max-width: 50%;
+  transform: translate3d(0, calc(var(--scrollTop) / 2), 0);
+  will-change: transform;
+  text-transform: uppercase;
+  font-weight: 900;
+  margin-bottom: calc(var(--index) * 8);
+  color: #e7e6e0;
+  text-shadow: 0 0 15px #9e7d35;
+}
+.layers__title {
+  font-size: calc(var(--index) * 2.5);
+  letter-spacing: calc(var(--index) / 4.25);
+}
+
+.layers__caption {
+  font-size: calc(var(--index) * 1.2);
+  letter-spacing: calc(var(--index) / 3.5);
+}
