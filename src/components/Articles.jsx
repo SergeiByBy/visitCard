@@ -20,7 +20,7 @@ const Articles = () => {
             <li>git,github</li>
             <li>sass,less</li>
             <li>bootstrap</li>
-            <li>material-ua</li>
+            <li>material-ui</li>
           </ul>
         </div>
         <div className="copy">®Кириллин Сергей</div>
