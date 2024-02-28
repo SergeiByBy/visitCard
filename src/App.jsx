@@ -8,8 +8,12 @@ const App = () => {
   });
   return (
     <>
-      <Header />
-      <Articles />
+      <div className="wrapper">
+        <div className="container">
+          <Header />
+          <Articles />
+        </div>
+      </div>
     </>
   );
 };
